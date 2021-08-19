@@ -1,0 +1,47 @@
+@import "../bootstrap-5.1.0/scss/functions";
+@import '../bootstrap-5.1.0/scss/variables';
+
+.fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    overflow: hidden;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    transition: all .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.5);
+
+    &:hover {
+        transform: scale(1.125);
+    }
+
+    a{
+        color: #fff;
+    }
+   
+    .fa{
+        padding-left: 7px;
+    }
+}
+
+@each $name, $color in $colors {
+    .fab-#{$name} {
+        background-color: $color;
+
+        &:hover {
+            background-color: lighten($color, 20);
+        }
+    }
+}
+

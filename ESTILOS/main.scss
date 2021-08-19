@@ -1,0 +1,665 @@
+$ancho: 500px;
+
+
+html, body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgba(177, 171, 206, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    
+    h2{
+        color: white;
+    margin-left: 5px;
+   font-weight: 600;
+    }
+
+}
+
+
+
+.orden {
+    display: flex;
+    flex-direction: row;
+    list-style-type:none;
+    color: #542d5e;
+    width: max-content;
+    margin-left: auto;
+    margin-right: 30px;
+    
+    
+}
+
+
+.orden li{
+    margin-right: 20px;
+    position: relative;
+}
+
+.orden a
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.orden li > a,
+.contenedor-subitems > a {
+    z-index: 20;
+    position: relative;
+}
+
+.contenedor-subitems:hover > .subitems {
+    display: block;
+}
+
+.contenedor-subitems {
+    position: relative;
+}
+
+.contenedor-subitems > .subitems {
+    display: none;
+    position: absolute;
+    padding: 0;
+    left: 0;
+    width: $ancho - 300;
+    top: 0;
+    z-index: 10;
+}
+
+.contenedor-subitems > .subitems > ul {
+    margin-top: 30px;
+    background: rgba(0,0,0,.4);
+}
+
+.contenedor-subitems > .subitems > ul > li {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.indexVideo{
+    position: fixed;
+    object-fit: cover;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.myClass section{
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    
+}
+
+.about-me{
+    background-color: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+    .about-me__container {
+        width: $ancho;
+
+    }
+
+    .about-me__header{
+        color: #F5EFA3;
+    }
+
+    .about-me__idea{
+
+        color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    }
+}
+
+
+.mis-dibujos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .mis-dibujos__container{
+        background-color: rgba(0,0,0,.6);
+        width: $ancho+100;
+        height: $ancho - 100;
+
+    }
+
+
+    .mis-dibujos__width {
+        width: $ancho;
+        margin-left: 50px;
+        margin-top: 50px;
+
+    }
+
+    .mis-dibujos__header{
+        color: #F5EFA3;
+    }
+
+    .mis-dibujos__idea{
+
+        color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    }
+}
+
+
+.error-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 30;
+    position: relative;
+
+    .error-page__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .error-page__width{
+             background-color: rgba(0,0,0,.6);
+            width: $ancho+100;
+            height: $ancho - 100;
+    
+        }
+    
+        .error-page__content{
+            width: $ancho;
+            margin-left: 50px;
+            margin-top: 50px;
+            color: white;
+    
+        }
+
+        .error-page__button{
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        
+        background-color: #5E548E;
+        border: none;
+        color: white;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+        text-decoration: none;
+
+
+        }
+        
+    }
+}
+
+
+
+
+.hewwo{
+    background-color:white;
+}
+
+.grilla {
+    display: grid;
+    grid-template-rows: 100px 500px 100px;
+    grid-template-columns: repeat(3, 1fr);
+   
+    grid-template-areas:
+     "gridHeader gridHeader gridHeader"
+     "card1 card2 card3"
+     "gridFooter gridFooter gridFooter";
+}
+
+.gridHeader {
+    grid-area: gridHeader;
+    background-color: #D4C9E3;
+    color: #08060E;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+}
+
+.card1 {
+    grid-area: card1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card2 {
+    grid-area: card2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card3 {
+    grid-area: card3;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card1 p,
+.card2 p,
+.card3 p{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+
+.gridFooter {
+    grid-area: gridFooter;
+    background-image: linear-gradient(to bottom, #D4C9E3,#877eb4);
+    color: #08060E;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+    letter-spacing: 2px;
+
+    a{
+
+        text-decoration: none;
+    color: #08060E;
+
+    }
+}
+
+
+
+.tarjeta-container{
+    background-color: azure;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: $ancho/2;
+    height: 425px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+
+    img{
+        width: $ancho - 300;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .tarjeta-container__datos{
+        text-align: center;
+    
+    }
+    
+}
+
+
+
+.dibujoFila{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img{
+        height: $ancho/2;
+        width: $ancho/2;
+        margin-right: 15px;
+        border-radius: 5px;
+        margin-top: 60px;
+        transition: transform 1s;
+    
+    }
+
+    img:hover{
+        transform: scale(1.5);
+    }
+
+    
+   
+}
+
+.mis-comisiones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .mis-comisiones__container{
+        background-color: rgba(0,0,0,.6);
+        width: $ancho+100;
+        height: 300px;
+
+    }
+
+
+    .mis-comisiones__width {
+        width: $ancho;
+        margin-left: 50px;
+        margin-top: 50px;
+
+    }
+
+    .mis-comisiones__header{
+        color: #F5EFA3;
+    }
+
+    .mis-comisiones__idea{
+
+        color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    }
+}
+
+
+.carta-info{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-content: center;
+    margin: 0 250px;
+    margin-bottom: 75px;
+    padding-top: 150px;
+
+    .carta-info__container{
+        background-color: azure;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        width: $ancho/2;
+        height: 425px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        display: inline-block;
+    
+    }
+
+    .carta-info__container:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+    }
+    
+    img{
+        max-width: 250px;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+    .carta-info__datos{
+    
+            text-align: left;
+            font-size: 14px;
+            margin-left: 10px;
+    }
+
+    .carta-info__boton{
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        margin-left: 170px;
+        background-color: #5E548E;
+        border: none;
+        color: white;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+        text-decoration: none;
+
+    }
+    
+}
+
+
+.learning{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .learning__container{
+        background-color: rgba(0,0,0,.6);
+        width: $ancho+100;
+        height: 200px;
+
+    }
+
+
+    .learning__width {
+        width: $ancho;
+        margin-left: 50px;
+        margin-top: 50px;
+
+    }
+    .learning__idea{
+
+        color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    }
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    iframe{
+    
+            width: $ancho+300;
+            height: 500px;
+
+    }
+
+}
+
+
+.myForm{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+
+    .myForm__container{
+        width: 400px;
+        color: #312556;
+      }
+   
+
+      .myForm__item{
+        color:#312556;
+        text-decoration: none;
+    }
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+form > * {
+    margin: 10px 0 !important;
+}
+form>label{
+    color:#312556;
+}
+
+form > input, 
+form > textarea,
+form > select {
+    border-radius: 10px;
+}
+
+form > textarea{
+    height: 150px;
+}
+
+i{
+    padding-right: 10px;
+}
+
+footer{
+    background-color: #08060E;
+    color: white;
+    z-index: 10;
+    display: block;
+    position: relative;
+    height: 200px;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+
+    a{
+        color: white;
+        text-decoration: none;
+
+    }
+}
+
+
+
+img.map {
+    position:fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hewwo2{
+    background-color: rgba(212,201,227,0.9);
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+}
+
+.indexContacto{
+    background-color: #08060E;
+    color: white;
+    z-index: 10;
+    display: block;
+    position: relative;
+    height: 100px;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 40px;
+
+}
+
+.caja-subitem{
+    background-color: #D4C9E3;
+
+    .caja-subitem__container{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+
+    .caja-subitem__item{
+        width: 300px;
+        height: 400px;
+        margin-right: 10px;
+        border-radius: 10px;
+        transition: transform 1s;
+    
+    }
+
+    .caja-subitem__item:hover{
+        transform: scale(1.5);
+    }
+
+    
+    
+   
+}
+
+
+
+.carouselContainer{
+    display: flex;
+    align-items: center;
+}
+
+#carouselEstilo{
+   
+   margin: 0 auto;
+    width: 400px;
+    height: 600px;
+}
+
+.carousel-item img{
+    width: 400px;
+    height: 600px;
+}
+
+
+
+
+@media  only screen and (max-width: 375px) {
+
+   
+   body>header{
+       flex-direction: column;
+
+   }
+
+   .orden{
+       margin-left: 5px;
+   }
+
+.orden li{
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+#carouselEstilo{
+    margin-top: 100px;
+}
+    
+}
+
+@media only screen and (max-width: 768px){
+
+
+    .orden li{
+        margin-right:10px;
+        font-size: 15px;
+    }
+
+
+}
