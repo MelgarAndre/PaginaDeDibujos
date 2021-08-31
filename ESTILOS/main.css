@@ -11267,7 +11267,7 @@ header h2, header .h2 {
 
 @media only screen and (max-width: 375px) {
   .mis-dibujos .mis-dibujos__container {
-    top: 120px;
+    top: 200px;
     width: 100%;
     height: auto;
     position: relative;
@@ -11594,7 +11594,7 @@ header h2, header .h2 {
 @media only screen and (max-width: 375px) {
   .mis-comisiones .mis-comisiones__container {
     position: relative;
-    top: 80px;
+    top: 200px;
     width: 100%;
     height: auto;
   }
@@ -11734,7 +11734,7 @@ header h2, header .h2 {
 @media only screen and (max-width: 375px) {
   .learning .learning__container {
     position: relative;
-    top: 30px;
+    top: 200px;
     width: 100%;
     height: auto;
   }
@@ -11933,6 +11933,17 @@ img.map {
   }
 }
 
+.caja-subitem .caja-subitem__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .caja-subitem .caja-subitem__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11946,9 +11957,10 @@ img.map {
 }
 
 .caja-subitem .caja-subitem__item {
-  width: 300px;
+  min-width: 230px;
+  width: 30%;
   height: 400px;
-  margin-right: 10px;
+  margin: 10px;
   border-radius: 10px;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
@@ -11958,6 +11970,7 @@ img.map {
 
 @media only screen and (max-width: 375px) {
   .caja-subitem .caja-subitem__item {
+    min-width: auto;
     width: 100%;
     height: auto;
     margin: 0;
@@ -12031,14 +12044,5 @@ img.map {
   .orden li {
     margin-right: 10px;
     margin-left: 0px;
-  }
-  .caja-subitem__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
   }
 }

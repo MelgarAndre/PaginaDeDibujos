@@ -178,7 +178,7 @@ header{
         height: $ancho - 100;
 
         @media only screen and (max-width: 375px) {
-            top: 120px;
+            top: 200px;
             width: 100%;
             height: auto;
             position: relative;
@@ -440,7 +440,7 @@ header{
 
         @media only screen and (max-width: 375px) {
             position: relative;
-            top: 80px;
+            top: 200px;
             width: 100%;
             height: auto;
         }
@@ -557,7 +557,7 @@ header{
 
         @media only screen and (max-width: 375px) {
             position: relative;
-            top: 30px;
+            top: 200px;
             width: 100%;
             height: auto;
         }
@@ -733,6 +733,13 @@ img.map {
         padding-top: 50vh;
     }
 
+    .caja-subitem__box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
     .caja-subitem__container{
         
         display: flex;
@@ -743,13 +750,15 @@ img.map {
     }
 
     .caja-subitem__item{
-        width: 300px;
+        min-width: 230px;
+        width: 30%;
         height: 400px;
-        margin-right: 10px;
+        margin: 10px;
         border-radius: 10px;
         transition: transform 1s;
 
         @media only screen and (max-width: 375px) {
+            min-width: auto;
             width: 100%;
             height: auto;
             margin: 0;
@@ -825,9 +834,6 @@ img.map {
 
     }
 
-   .caja-subitem__box{
-       display: flex;
-       flex-direction: row;
-   }
+  
 
 }
