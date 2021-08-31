@@ -52,6 +52,13 @@ header{
     margin-left: auto;
     margin-right: 30px;
     
+    .orden__lista--mobile {
+        display: none;
+
+        @media only screen and (max-width: 375px) {
+            display: list-item;
+        }
+    }
     
 }
 
@@ -76,6 +83,9 @@ header{
 
 .contenedor-subitems:hover > .subitems {
     display: block;
+    @media only screen and (max-width: 375px) {
+        display: none;
+    }
 }
 
 .contenedor-subitems {
@@ -112,11 +122,13 @@ header{
     height: 100vh;
 }
 
-.myClass section{
+.myClass section {
     position: relative;
     z-index: 10;
-    height: 100vh;
-    
+}
+
+.myClass .background {
+    min-height: 100vh;   
 }
 
 .about-me{
@@ -143,6 +155,15 @@ header{
     line-height: 1.5;
     text-align: justify;
     }
+    
+    @media  only screen and (max-width: 375px) {
+
+        .about-me__container{
+            width: 300px;
+        }
+    }
+
+
 }
 
 
@@ -156,6 +177,13 @@ header{
         width: $ancho+100;
         height: $ancho - 100;
 
+        @media only screen and (max-width: 375px) {
+            top: 120px;
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 10px 20px;
+        }
     }
 
 
@@ -163,6 +191,13 @@ header{
         width: $ancho;
         margin-left: 50px;
         margin-top: 50px;
+
+        @media only screen and (max-width: 375px) {
+            margin-left: 0;
+            margin-top: 0;
+            width: 100%;
+            height: auto;
+        }
 
     }
 
@@ -195,9 +230,14 @@ header{
         align-items: center;
     
         .error-page__width{
-             background-color: rgba(0,0,0,.6);
+            background-color: rgba(0,0,0,.6);
             width: $ancho+100;
             height: $ancho - 100;
+
+            @media only screen and (max-width: 375px) {
+                width: 100%;
+                height: 100%;
+            }
     
         }
     
@@ -207,6 +247,12 @@ header{
             margin-top: 50px;
             color: white;
     
+            @media only screen and (max-width: 375px) {
+                width: 100%;
+                padding: 50px;
+                margin-left: 0;
+                margin-top: 0;
+            }
         }
 
         .error-page__button{
@@ -238,13 +284,26 @@ header{
 
 .grilla {
     display: grid;
-    grid-template-rows: 100px 500px 100px;
+    grid-template-rows: 100px 400px 100px;
     grid-template-columns: repeat(3, 1fr);
    
     grid-template-areas:
      "gridHeader gridHeader gridHeader"
      "card1 card2 card3"
      "gridFooter gridFooter gridFooter";
+
+     @media  only screen and (max-width: 375px) {
+        grid-template-rows: 100px 350px 350px 350px 100px;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "gridHeader"
+        "card1"
+        "card2"
+        "card3"
+        "gridFooter";
+     }
+
+
 }
 
 .gridHeader {
@@ -256,6 +315,13 @@ header{
     font-size: 35px;
     word-spacing: 10px;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+    p {
+        margin-bottom: 0;
+    }
 }
 
 .card1 {
@@ -295,10 +361,16 @@ header{
     letter-spacing: 2px;
 
     a{
-
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
         text-decoration: none;
-    color: #08060E;
+        color: #08060E;
 
+        p {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -307,8 +379,8 @@ header{
 .tarjeta-container{
     background-color: azure;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: $ancho/2;
-    height: 425px;
+    width: 275px;
+    height: 325px;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 10px;
@@ -331,10 +403,14 @@ header{
 
 
 
-.dibujoFila{
+.dibujoFila {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 375px) {
+        flex-direction: column;
+    }
     
     img{
         height: $ancho/2;
@@ -349,8 +425,6 @@ header{
     img:hover{
         transform: scale(1.5);
     }
-
-    
    
 }
 
@@ -364,6 +438,13 @@ header{
         width: $ancho+100;
         height: 300px;
 
+        @media only screen and (max-width: 375px) {
+            position: relative;
+            top: 80px;
+            width: 100%;
+            height: auto;
+        }
+
     }
 
 
@@ -372,6 +453,12 @@ header{
         margin-left: 50px;
         margin-top: 50px;
 
+        @media only screen and (max-width: 375px) {
+            width: 100%;
+            margin-left: 0px;
+            margin-top: 0px;
+        }
+
     }
 
     .mis-comisiones__header{
@@ -379,11 +466,10 @@ header{
     }
 
     .mis-comisiones__idea{
-
         color: white;
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: justify;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: justify;
     }
 }
 
@@ -397,6 +483,13 @@ header{
     margin-bottom: 75px;
     padding-top: 150px;
 
+    @media only screen and (max-width: 375px) {
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .carta-info__container{
         background-color: azure;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -406,6 +499,10 @@ header{
         margin-right: 20px;
         border-radius: 10px;
         display: inline-block;
+
+        @media only screen and (max-width: 375px) {
+            margin: 10px 0;
+        }
     
     }
 
@@ -458,6 +555,13 @@ header{
         width: $ancho+100;
         height: 200px;
 
+        @media only screen and (max-width: 375px) {
+            position: relative;
+            top: 30px;
+            width: 100%;
+            height: auto;
+        }
+
     }
 
 
@@ -466,13 +570,20 @@ header{
         margin-left: 50px;
         margin-top: 50px;
 
+        @media only screen and (max-width: 375px) {
+            width: 100%;
+            padding: 20px;
+            margin-left: 0;
+            margin-top: 0;
+        }
+
     }
     .learning__idea{
 
         color: white;
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: justify;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: justify;
     }
 }
 
@@ -486,6 +597,12 @@ header{
             width: $ancho+300;
             height: 500px;
 
+            @media only screen and (max-width: 375px) {
+                margin: 10px;
+                width: 100%;
+                height: auto;
+            }
+
     }
 
 }
@@ -497,9 +614,22 @@ header{
     height: 100%;
     align-items: center;
 
+    @media only screen and (max-width: 375px) {
+        padding: 20px;
+        flex-direction: column;
+
+        div {
+            width: 100%;
+        }
+    }
+
     .myForm__container{
         width: 400px;
         color: #312556;
+
+        @media only screen and (max-width: 375px) {
+            width: 100%;
+        }
       }
    
 
@@ -514,6 +644,10 @@ form{
     display: flex;
     flex-direction: column;
     width: 400px;
+
+    @media only screen and (max-width: 375px) {
+        width: 100%;
+    }
 }
 
 form > * {
@@ -537,7 +671,7 @@ i{
     padding-right: 10px;
 }
 
-footer{
+footer {
     background-color: #08060E;
     color: white;
     z-index: 10;
@@ -547,6 +681,10 @@ footer{
     font-size: 15px;
     text-align: center;
     padding-top: 10px;
+
+    @media only screen and (max-width: 375px) {
+        padding: 20px 20px 0 20px;
+    }
 
     a{
         color: white;
@@ -565,10 +703,9 @@ img.map {
 }
 
 .hewwo2{
+    width: 100%;
     background-color: rgba(212,201,227,0.9);
-    position: relative;
-    z-index: 10;
-    height: 100vh;
+    padding: 50px 0;
 }
 
 .indexContacto{
@@ -587,6 +724,10 @@ img.map {
 .caja-subitem{
     background-color: #D4C9E3;
 
+    @media only screen and (max-width: 375px) {
+        padding-top: 50vh;
+    }
+
     .caja-subitem__container{
         
         display: flex;
@@ -602,6 +743,13 @@ img.map {
         margin-right: 10px;
         border-radius: 10px;
         transition: transform 1s;
+
+        @media only screen and (max-width: 375px) {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 20px;
+        }
     
     }
 
@@ -621,11 +769,15 @@ img.map {
     align-items: center;
 }
 
-#carouselEstilo{
+#carouselEstilo {
    
-   margin: 0 auto;
+    margin: 0 auto;
     width: 400px;
     height: 600px;
+
+    @media only screen and (max-width: 375px) {
+        margin-top: 340px;
+    }
 }
 
 .carousel-item img{
@@ -636,36 +788,27 @@ img.map {
 
 
 
-@media  only screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
 
    
    body>header{
        flex-direction: column;
-
+        position: absolute;
    }
 
    .orden{
-       margin-left: 5px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin-left: 0;
+       margin-right: 0;
    }
 
-.orden li{
-    margin-right: 10px;
-    font-size: 12px;
-}
-
-#carouselEstilo{
-    margin-top: 100px;
-}
-    
-}
-
-@media only screen and (max-width: 768px){
-
-
     .orden li{
-        margin-right:10px;
-        font-size: 15px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    
     }
-
-
 }
+
